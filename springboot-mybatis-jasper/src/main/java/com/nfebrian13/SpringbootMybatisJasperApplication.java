@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.nfebrian13.service.EmployeeService;
 import com.nfebrian13.service.StudentService;
 
 import org.slf4j.Logger;
@@ -18,6 +19,9 @@ public class SpringbootMybatisJasperApplication implements CommandLineRunner {
 	@Autowired
 	private StudentService studentService;
 
+	@Autowired
+	private EmployeeService employeeService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootMybatisJasperApplication.class, args);
 	}
@@ -27,6 +31,9 @@ public class SpringbootMybatisJasperApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		LOGGER.info("Student id 10001 -> {}", studentService.findById(10001L));
 		LOGGER.info("All users -> {}", studentService.findAll());
+		
+		LOGGER.info("Employee id 1001L -> {}", employeeService.findByIdEmployee(1001L));
+		LOGGER.info("All Employee -> {}", employeeService.findAllEmployee());
 	}
 
 }
