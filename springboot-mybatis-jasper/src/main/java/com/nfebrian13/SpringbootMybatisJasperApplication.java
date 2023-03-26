@@ -30,7 +30,7 @@ public class SpringbootMybatisJasperApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		LOGGER.info("Student id 10001 -> {}", studentService.findById(10001L));
 		LOGGER.info("All users -> {}", studentService.findAll());
-		
+
 		LOGGER.info("Employee id 1001L -> {}", employeeService.findByIdEmployee(1001L));
 		LOGGER.info("All Employee -> {}", employeeService.findAllEmployee());
 	}
