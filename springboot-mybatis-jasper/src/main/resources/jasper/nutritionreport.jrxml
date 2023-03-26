@@ -109,7 +109,7 @@
 		<band height="61" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="200" splitType="Stretch">
+		<band height="317" splitType="Stretch">
 			<componentElement>
 				<reportElement style="Table_CH" x="0" y="0" width="200" height="200" uuid="826a7b10-9a9f-4251-be47-cef1afc0ccd5">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>

@@ -71,7 +71,7 @@ public class ReportService {
 		
 		try {
 			
-			File file = ResourceUtils.getFile("classpath:nutritionreport.jrxml");
+			File file = ResourceUtils.getFile("classpath:jasper/nutritionreport.jrxml");
 			JasperReport report = JasperCompileManager.compileReport(file.getAbsolutePath());
 			JasperPrint print = JasperFillManager.fillReport(report, parameters, new JREmptyDataSource());
 			JasperExportManager.exportReportToPdfFile(print, filePath + "nutritionreport.pdf");
