@@ -1,5 +1,7 @@
 package com.nfebrian13;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,9 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.nfebrian13.service.EmployeeService;
 import com.nfebrian13.service.StudentService;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @SpringBootApplication
 public class SpringbootMybatisJasperApplication implements CommandLineRunner {
