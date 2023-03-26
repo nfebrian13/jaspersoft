@@ -37,6 +37,7 @@
 		<field name="nutritionName" class="java.lang.String"/>
 		<field name="goal" class="java.lang.Integer"/>
 		<field name="metric" class="java.lang.String"/>
+		<sortField name="nutritionName"/>
 	</subDataset>
 	<parameter name="firstName" class="java.lang.String"/>
 	<parameter name="lastName" class="java.lang.String"/>
