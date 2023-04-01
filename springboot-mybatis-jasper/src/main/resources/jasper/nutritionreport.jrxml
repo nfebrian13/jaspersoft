@@ -44,6 +44,8 @@
 	<parameter name="dob" class="java.lang.String"/>
 	<parameter name="age" class="java.lang.Integer"/>
 	<parameter name="nutritionDataset" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="foodReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="foodParameters" class="java.util.Map"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -109,7 +111,7 @@
 		<band height="61" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="317" splitType="Stretch">
+		<band height="473" splitType="Stretch">
 			<componentElement>
 				<reportElement style="Table_CH" x="0" y="0" width="200" height="200" uuid="826a7b10-9a9f-4251-be47-cef1afc0ccd5">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
@@ -191,6 +193,12 @@
 					</jr:column>
 				</jr:table>
 			</componentElement>
+			<subreport>
+				<reportElement x="84" y="273" width="200" height="200" uuid="2f2f10f8-79bc-44cf-8eac-f6d44845ec2d"/>
+				<parametersMapExpression><![CDATA[$P{foodParameters}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{foodReport}]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 	<columnFooter>
